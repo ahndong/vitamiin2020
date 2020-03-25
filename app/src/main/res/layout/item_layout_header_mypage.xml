@@ -1,0 +1,240 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:translationZ="0dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="0dp"
+        android:translationZ="0dp"
+        android:background="@drawable/mypage_background_blurred">
+        <ImageView
+            android:id="@+id/imv_back"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:padding="14dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/ic_back"
+            android:contentDescription="back button"/>
+        <LinearLayout
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:translationZ="6dp"
+            android:background="@drawable/floating_button_modi_profile_42_5"
+            android:orientation="vertical">
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/imv_dummy"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:translationZ="15dp"
+            android:background="@drawable/floating_button_modi_profile_42_5"
+            android:orientation="vertical">
+        </LinearLayout>
+        <app.vitamiin.com.common.CircleImageView
+            android:id="@+id/imv_profile"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:translationZ="16dp"
+            android:src="@drawable/btn_camera" />
+        <ImageView
+            android:id="@+id/imv_edit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/imv_profile"
+            android:layout_alignRight="@+id/imv_profile"
+            android:translationZ="20dp"
+            app:srcCompat="@drawable/ic_camera_edit" />
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/imv_profile"
+            android:layout_centerHorizontal="true"
+            android:text="nick_name"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+        <ImageView
+            android:id="@+id/imv_family"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/imv_my"
+            app:srcCompat="@drawable/ic_healthconsult" />
+        <ImageView
+            android:id="@+id/imv_my"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_setup" />
+
+        <TextView
+            android:id="@+id/tv_fallow_user"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="53dp"
+            android:translationZ="16dp"
+            android:background="@drawable/selector_toggle_fallow"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="팔로잉"
+            android:textColor="@color/white_color"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:background="#6000"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/lly_fallowing"
+                android:layout_width="74dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/white_color"
+                    android:textSize="16sp"
+                    android:id="@+id/tv_fallowing_cnt" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="팔로잉"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="@color/white_color" />
+            <LinearLayout
+                android:id="@+id/lly_fallow"
+                android:layout_width="74dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_fallow_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/white_color"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="팔로워"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="@color/white_color" />
+            <LinearLayout
+                android:id="@+id/lly_like"
+                android:layout_width="74dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_like_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/white_color"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="좋아요"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:translationZ="12dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_review"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_search_bgcolor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="리뷰 (0)"
+            android:textColor="@color/selector_search_textcolor" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#fff" />
+        <TextView
+            android:id="@+id/tv_exper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_search_bgcolor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="노하우 공유 (0)"
+            android:textColor="@color/selector_search_textcolor" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tv_sikdan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_search_bgcolor"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="식단 (0)"
+            android:textColor="@color/selector_search_textcolor"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

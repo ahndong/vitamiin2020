@@ -1,0 +1,15 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_normal_title_hight">50dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="dialog_small_hight">280dp</dimen>
+    <dimen name="exper_and_review_smalltext">18sp</dimen>
+    <dimen name="search_title_hight_small">62dp</dimen>
+    <dimen name="search_title_hight_big">80dp</dimen>
+    <dimen name="search_num_of_product_area">30dp</dimen>
+    <dimen name="search_select_brand_area">90dp</dimen>
+    <dimen name="fragment_review_topbar_area">45dp</dimen>
+    <dimen name="fragment_main_product_name">14sp</dimen>
+    <dimen name="fragment_main_business_name">10sp</dimen>
+</resources>

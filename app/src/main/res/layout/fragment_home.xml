@@ -1,0 +1,701 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <com.baoyz.widget.PullRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/backward_event"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:translationZ="20dp"
+                        android:text="&lt;"
+                        android:textSize="30dp"
+                        android:textColor="@color/white_color"/>
+                    <TextView
+                        android:id="@+id/foreward_event"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:translationZ="20dp"
+                        android:text="&gt;"
+                        android:textSize="30dp"
+                        android:textColor="@color/white_color"/>
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vwp_shop_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:translationZ="10dp"
+                        android:layout_centerVertical="true"/>
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/cpi_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:padding="4dp"
+                        app:fillColor="@color/main_color_1"
+                        app:pageColor="@color/bg_grey"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="@color/main_color_2"
+                        app:radius="5dp"
+                        android:translationZ="20dp"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_color_2"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="랭킹제품"
+                        android:textColor="@color/white_color"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/tv_raking_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:text="more >"
+                        android:textColor="@color/white_color" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+                    <include
+                        android:id="@+id/ic_ranking_1"
+                        layout="@layout/layout_ranking"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                    <include
+                        android:id="@+id/ic_ranking_2"
+                        layout="@layout/layout_ranking"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                    <include
+                        android:id="@+id/ic_ranking_3"
+                        layout="@layout/layout_ranking"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/main_color_2" />
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="38dp"-->
+                    <!--android:background="@color/white_color"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="빠른 제품 검색하기"-->
+                        <!--android:textColor="@color/main_color_1"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:textSize="14sp" />-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_search_more"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:layout_marginEnd="10dp"-->
+                        <!--android:text="more >"-->
+                        <!--android:textColor="@color/main_color_1" />-->
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="1dp"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:background="@color/main_color_1" />-->
+                <!--</RelativeLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/lly_product_family"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="8dp"
+                            app:srcCompat="@drawable/home_frag_product_family"/>
+                        <TextView
+                            android:id="@+id/tv_product_family"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="제품군 선택"
+                            android:textColor="@color/main_grey" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/main_color_2" />
+
+                    <LinearLayout
+                        android:id="@+id/lly_functionality"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="8dp"
+                            app:srcCompat="@drawable/home_frag_functionality"/>
+                        <TextView
+                            android:id="@+id/tv_functionality"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="효능-기능 선택"
+                            android:textColor="@color/main_grey" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/main_color_2" />
+
+                    <LinearLayout
+                        android:id="@+id/lly_target_type"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="8dp"
+                            app:srcCompat="@drawable/home_frag_target"/>
+                        <TextView
+                            android:id="@+id/tv_target_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="복용대상 선택"
+                            android:textColor="@color/main_grey" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/main_color_2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="6dp"
+                        android:text="비타미인에 관한 여러분의 소중한 의견을 들려주세요!!\n앞으로 더 나은 비타미인을 만들어 가겠습니다."
+                        android:textColor="@color/main_grey"
+                        android:layout_gravity="center"
+                        android:gravity="start"
+                        android:lineSpacingMultiplier="1.2"
+                        android:textSize="10sp" />
+                    <LinearLayout
+                        android:id="@+id/lly_direct_question"
+                        android:layout_width="110dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/xml_direct_question"
+                        android:layout_gravity="center">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:gravity="center"
+                            android:drawableRight="@drawable/icon_direct_question"
+                            android:drawableEnd="@drawable/icon_direct_question"
+                            android:text="문의하기"
+                            android:textColor="@color/main_color_1"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_color_2"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:text="파워리뷰 by Vitamiin"
+                        android:textColor="@color/white_color"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/tv_power_review_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:text="more >"
+                        android:textColor="@color/white_color" />
+                </LinearLayout>
+                <include
+                    android:id="@+id/ic_power_review"
+                    layout="@layout/layout_power_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:background="@color/bg_grey"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_color_2"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp">
+                        <TextView
+                            android:id="@+id/tv_featureA"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            android:maxLines="1"
+                            android:text="기능별 A"
+                            android:textColor="@color/white_color"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tv_featureA_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text=""
+                            android:textColor="@color/white_color"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white_color" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp">
+                        <TextView
+                            android:id="@+id/tv_featureB"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            android:text="기능별 B"
+                            android:textColor="@color/white_color"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tv_featureB_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text=""
+                            android:textColor="@color/white_color" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+                    <include
+                        android:id="@+id/ic_feature_1"
+                        layout="@layout/layout_feature"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                    <include
+                        android:id="@+id/ic_feature_2"
+                        layout="@layout/layout_feature"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_color_2"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp">
+                        <TextView
+                            android:id="@+id/tv_featureC"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            android:text="연령별 A"
+                            android:textColor="@color/white_color"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tv_age_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text=""
+                            android:textColor="@color/white_color" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white_color" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="5dp">
+                        <TextView
+                            android:id="@+id/tv_featureD"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            android:text="질환별 A"
+                            android:textColor="@color/white_color"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tv_illness_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text=""
+                            android:textColor="@color/white_color" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <include
+                        android:id="@+id/ic_feature_3"
+                        layout="@layout/layout_feature"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <include
+                        android:id="@+id/ic_feature_4"
+                        layout="@layout/layout_feature"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_grey"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/tv_expert"
+                        android:layout_width="match_parent"
+                        android:layout_height="124dp"
+                        android:background="@drawable/xml_white_rounded_box"
+                        android:orientation="vertical"
+                        android:layout_margin="6dp"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="4dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="23dp"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/together_expert" />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingStart="10dp"
+                                android:text="함께 만든 전문가"
+                                android:textColor="@color/main_color_1"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=">"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@color/main_color_1" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:text="비타미인은 약사님, 가정의학과 전문의와 함께하고 있습니다.\n여러분들의 Life 및 건강 상태에 맞춰 건강기능식품을\n추천하는 알고리즘을 함께 만들어 주셨습니다. \n앞으로도 여러분의 건강을 위해 비타미인과 함께 해주십니다."
+                            android:textSize="12sp"
+                            android:textColor="@color/main_grey_1"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lly_praise"
+                        android:layout_width="match_parent"
+                        android:layout_height="124dp"
+                        android:background="@drawable/xml_white_rounded_box"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="4dp"
+                            android:gravity="center">
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="23dp"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/praise" />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingStart="10dp"
+                                android:text="칭찬하기"
+                                android:textColor="@color/main_color_1"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=">"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@color/main_color_1" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:text="여러분의 건강기능식품 추천 도우미 비타미인 어떠셨나요??\n여러분의 건강행복지수에 도움이 되었으면~\n플레이스토어에서 마구마구!~^^ 칭찬 부탁드립니다.\n\n감사합니다!"
+                            android:textSize="12sp"
+                            android:textColor="@color/main_grey_1"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_color"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="비타미인이 더 힘을 내도록 응원해주세요!"
+                        android:textSize="12sp"
+                        android:textColor="@color/main_grey_1"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:id="@+id/lly_link_to_instagram"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                app:srcCompat="@drawable/btn_insta"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="인스타그램"
+                                android:padding="6dp"
+                                android:textSize="12sp"
+                                android:textColor="@color/black_color"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/lly_link_to_facebook"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                app:srcCompat="@drawable/btn_facebook"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="페이스북"
+                                android:padding="6dp"
+                                android:textSize="12sp"
+                                android:textColor="@color/black_color"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/lly_link_to_naverblog"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                app:srcCompat="@drawable/btn_naver"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="네이버블로그"
+                                android:padding="6dp"
+                                android:textSize="12sp"
+                                android:textColor="@color/black_color"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </com.baoyz.widget.PullRefreshLayout>
+</LinearLayout>

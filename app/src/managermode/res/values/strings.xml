@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">비타미인</string>
+    <string name="action_settings">Settings</string>
+    <string name="applicationId">app.vitamiin.com.managermode</string>
+    <string name="str_C2D_MESSAGE">app.vitamiin.com.managermode.permission.C2D_MESSAGE</string>
+    <string name="provider_authorities">app.vitamiin.com.managermode.provider</string>
+
+    <string name="facebook_app_id">1289708227794358</string>
+    <string name="fb_login_protocol_scheme">fb1289708227794358</string>
+    <string name="facebook_provider">com.facebook.app.FacebookContentProvider1289708227794358</string>
+
+    <string name="kakao_app_key">0379a131c048bedf1841de36a5ae4566</string>
+    <string name="kakao_scheme">kakao0379a131c048bedf1841de36a5ae4566</string>
+    <string name="kakaolink_host">kakaolink</string>
+
+    <string name="app_finish_message">"'뒤로' 버튼을 한번 더 누르면 종료됩니다."</string>
+    <string name="image_max_size_limit_msg">메모리 용량이 5MB이상이여야 합니다.</string>
+
+    <string name="button_for_ssl_go_back"></string>
+    <string name="button_for_ssl_go_forward"></string>
+    <string name="message_for_ssl_warning"></string>
+    <string name="title_for_ssl_warning"></string>
+</resources>

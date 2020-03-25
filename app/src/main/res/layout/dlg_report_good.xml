@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="275dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/xml_birth_dlg_bg"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="신고하기"
+        android:background="@drawable/xml_ok_btn_bg2"
+        android:textColor="@color/white_color"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_report_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/selector_toggle_check"
+            android:drawablePadding="10dp"
+            android:text="내용 오류 및 정정 요청"
+            android:textColor="@color/selector_next_textcolor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_report_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_report_1"
+            android:layout_below="@+id/tv_report_1"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/selector_toggle_check"
+            android:drawablePadding="10dp"
+            android:text="유해성분 함유"
+            android:textColor="@color/selector_next_textcolor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_report_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_report_2"
+            android:layout_below="@+id/tv_report_2"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/selector_toggle_check"
+            android:drawablePadding="10dp"
+            android:text="부작용 경험"
+            android:textColor="@color/selector_next_textcolor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_report_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_report_3"
+            android:layout_below="@+id/tv_report_3"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/selector_toggle_check"
+            android:drawablePadding="10dp"
+            android:text="기타"
+            android:textColor="@color/selector_next_textcolor"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="사유 작성"
+        android:textColor="@color/main_color_1"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edt_content"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:background="#f2f2f2"
+        android:gravity="left|top"
+        android:hint="최대 200자"
+        android:maxLength="200"
+        android:padding="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/xml_cancle_btn_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="취소"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/xml_ok_btn_bg"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="확인"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

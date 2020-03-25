@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.vitamiin.com">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <permission
+        android:name="app.vitamiin.com.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="app.vitamiin.com.permission.MAPS_RECEIVE" />
+    <!-- Copied from Google Maps Library/AndroidManifest.xml. -->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!--
+     Creates a custom permission so only this app can receive its messages.
+
+     NOTE: the permission *must* be called PACKAGE.permission.C2D_MESSAGE,
+           where PACKAGE is the application's package name.
+    -->
+<!--    <meta-data android:name="foo" android:resource="@string/str_C2D_MESSAGE"/>-->
+    <permission
+        android:name="foo"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="foo" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:name=".VitaminApp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".IntroActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TutorialActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".login.FindPWActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".login.PolicyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".login.PolicyViewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".login.RegisterIDActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".login.DetailLife1of3Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".login.DetailLife2of3Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".login.DetailLife3of3Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".login.RegFinishActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".home.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".home.GoodListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".home.DetailGoodActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="vitamiin" android:host="detailgood" />
+                <data android:scheme="@string/kakao_scheme" android:host="@string/kakaolink_host" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home.SearchInitActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".home.SearchBrandDialog"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".home.ChartActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".home.DetailReviewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="DetailReviewActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="vitamiin" android:host="detailreview" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home.DetailExpActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="DetailExpActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="vitamiin" android:host="detailexp" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".home.DetailPowerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="DetailPowerActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="vitamiin" android:host="detailpower" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".home.DetailEventActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="DetailPowerActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="vitamiin" android:host="detailevent" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".home.DetailFoodActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="DetailFoodActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="vitamiin" android:host="detailfood" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".home.ReviewWriteActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".home.ManageProfileActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".home.HashListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".home.ManageBodyInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".home.ManageLivingInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".home.ExpWriteActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".home.ContentDialog"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".home.MaterialDetailDialog"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".setting.MyPageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".setting.ChangePasswordActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".setting.FaqNoticeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".setting.SettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".setting.SignoutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".setting.QuestionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".setting.LikeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".setting.FollowingAndFollowerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".setting.ModifyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".login.DetailSurveyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".setting.ModifyDetailLifeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".login.KakaoSignupActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".common.ShowNotifyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" />
+
+        <receiver
+            android:name=".GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>     <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="app.vitamiin.com" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+          Application-specific subclass of GCMBaseIntentService that will
+          handle received messages.
+
+          By default, it must be named .GcmIntentService, unless the
+          application uses a custom BroadcastReceiver that redefines its name.
+        -->
+        <!--<service android:name=".GcmIntentService" />-->
+
+        <uses-library android:name="com.google.android.maps" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyA7hyTTzf_EVGPP-fpyutGyYN-GsD_K3js" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationName"
+            android:value="Vitamiin" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="fullSensor" />
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="@string/facebook_provider"
+            android:exported="false" />
+        <!--
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        -->
+
+        <!-- 3 -->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+        <!-- 4 -->
+        <activity
+            android:name="com.kakao.auth.authorization.authcode.KakaoWebViewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- android OS nougat 버전으로 인해 필요한 파일 저장 변경에 사용하는 provider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <!-- [START fcm_default_icon] -->
+        <!--
+        Set custom default icon. This is used when no icon is set for incoming notification messages.
+        See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/ic_launcher" />
+        <!--
+        Set color used with incoming notification messages. This is used when no color is set for the incoming
+        notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@color/main_color_1" />
+        <!-- [END fcm_default_icon] -->
+
+        <!-- [START firebase_service] -->
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+        <!-- [START firebase_iid_service] -->
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- [END firebase_iid_service] -->
+        <service android:name=".jobscheduler.service.MyJobService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="05743f381170b52d8ed742e540669b5010f6b67a" />
+    </application>
+</manifest>

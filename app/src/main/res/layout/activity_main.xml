@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:viewpager_="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/imv_setting"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="13dp"
+                        viewpager_:srcCompat="@drawable/ic_menu" />
+                    <ImageView
+                        android:id="@+id/imv_BI_logo"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="2"
+                        android:padding="2dp"
+                        viewpager_:srcCompat="@drawable/img_vitamin_log" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:paddingLeft="13dp"
+                        android:paddingRight="13dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rly_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@drawable/xml_search_bg"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                viewpager_:srcCompat="@drawable/ic_search" />
+
+                            <TextView
+                                android:id="@+id/tv_search"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="#00ffffff"
+                                android:gravity="center"
+                                android:hint="검색"
+                                android:imeOptions="actionSearch"
+                                android:maxLines="1"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imv_mypage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:padding="8dp"
+                        viewpager_:srcCompat="@drawable/ic_mypage" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/main_color_1" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#fff"
+                    android:translationZ="5dp"
+                    android:gravity="center_horizontal">
+                    <com.astuetz.PagerSlidingTabStrip
+                        android:id="@+id/tabs"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="40dp"
+                        android:background="#fff"
+                        viewpager_:pstsIndicatorColor="@color/main_color_2"
+                        viewpager_:pstsIndicatorHeight="3dp"
+                        viewpager_:pstsShouldExpand="false"
+                        viewpager_:pstsTabTextColor="@color/selector_next_textcolor"
+                        viewpager_:pstsTabTextSize="16sp"
+                        viewpager_:pstsTabTextStyle="bold" />
+                </RelativeLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    tools:context=".MainActivity" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/ic_slide_menu"
+                layout="@layout/menu_cast_slide"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start" />
+        </android.support.v4.widget.DrawerLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rly_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#6000">
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/lly_share"
+        layout="@layout/include_lly_share"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:translationZ="8dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:background="@color/white_color"/>
+</RelativeLayout>

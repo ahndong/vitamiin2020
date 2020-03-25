@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="taking_target">
+        <item>청소년</item>
+        <item>수험생</item>
+        <item>갱년기여성</item>
+        <item>성인남성</item>
+        <item>성인여성</item>
+        <item>노인남성</item>
+        <item>노인여성</item>
+        <item>영유아</item>
+        <item>어린이</item>
+        <item>임산부</item>
+        <item>수유부</item>
+    </string-array>
+
+    <string-array name="question_type">
+        <item>제휴</item>
+        <item>문의</item>
+    </string-array>
+
+    <string-array name="taken_period">
+        <item>2주</item>
+        <item>1개월</item>
+        <item>2개월</item>
+        <item>3개월</item>
+        <item>6개월 이상</item>
+    </string-array>
+
+    <string-array name="like_sort">
+        <item>제품</item>
+        <item>리뷰</item>
+        <item>식단 리뷰</item>
+        <item>노하우 공유</item>
+        <item>파워리뷰 by Vitamiin</item>
+    </string-array>
+
+    <string-array name="customer_center">
+        <item>앱 버그 관련</item>
+        <item>서비스 관련 요구 사항</item>
+        <item>기타 문의 사항</item>
+    </string-array>
+
+    <string-array name="review_category_reg">
+        <item>간건강</item>
+        <item>여성·갱년기 건강</item>
+        <item>과민 피부상태 개선</item>
+        <item>관절 - 뼈 건강</item>
+        <item>기억력 개선</item>
+        <item>긴장 완화</item>
+        <item>눈건강</item>
+        <item>면역 기능개선</item>
+        <item>배뇨 기능개선</item>
+        <item>요로 건강</item>
+        <item>운동 수행능력</item>
+        <item>위 건강 - 소화 건강</item>
+        <item>인지 능력향상</item>
+        <item>장 건강</item>
+        <item>전립선 건강</item>
+        <item>체지방 감소</item>
+        <item>치아 건강</item>
+        <item>칼슘 흡수촉진</item>
+        <item>피로 개선</item>
+        <item>피부 건강</item>
+        <item>항산화</item>
+        <item>혈당 조절</item>
+        <item>혈압 조절</item>
+        <item>혈중중성지방개선</item>
+        <item>혈중콜레스테롤</item>
+        <item>혈행 개선</item>
+        <item>아이 건강</item>
+        <item>구강 건강</item>
+        <item>코 건강</item>
+        <item>수면 질 개선</item>
+        <item>남성 갱년기</item>
+        <item>성기능 향상</item>
+        <item>탈모 예방</item>
+        <item>종합건강</item>
+    </string-array>
+
+    <string-array name="exp_category">
+        <item>다이어트</item>
+        <item>탈모</item>
+        <item>간건강</item>
+        <item>위건강</item>
+        <item>성기능</item>
+        <item>당뇨</item>
+        <item>고혈압</item>
+        <item>아토피</item>
+        <item>관절</item>
+        <item>장건강</item>
+        <item>알레르기</item>
+        <item>혈관건강</item>
+        <item>피로</item>
+        <item>면역</item>
+        <item>전체보기</item>
+    </string-array>
+
+    <string-array name="exp_category_reg">
+        <item>다이어트</item>
+        <item>탈모</item>
+        <item>간건강</item>
+        <item>위건강</item>
+        <item>성기능</item>
+        <item>당뇨</item>
+        <item>고혈압</item>
+        <item>아토피</item>
+        <item>관절</item>
+        <item>장건강</item>
+        <item>알레르기</item>
+        <item>혈관건강</item>
+        <item>피로</item>
+        <item>면역</item>
+    </string-array>
+
+    <string-array name="review_order">
+        <item>최신 순</item>
+        <item>좋아요 순</item>
+    </string-array>
+
+    <string-array name="hash_tag">
+        <item>#가격의 합리성</item>
+        <item>#깔끔한 포장</item>
+        <item>#맛과향이 좋아요</item>
+        <item>#아이가 먹기 좋아요</item>
+        <item>#효과 직~빵!</item>
+        <item>#풍부한 함량</item>
+        <item>#부작용이 없어요</item>
+        <item>#임산부에게 좋아요</item>
+        <item>#너무 비싼 가격</item>
+        <item>#볼품없는 포장</item>
+        <item>#맛과향이 좋지 않아요</item>
+        <item>#아이가 먹기 힘들어요</item>
+        <item>#효과가 저조함</item>
+        <item>#함량 미달</item>
+        <item>#부작용 발생</item>
+    </string-array>
+
+    <string-array name="buy_path">
+        <item>방문판매</item>
+        <item>다단계</item>
+        <item>홈쇼핑</item>
+        <item>인터넷 쇼핑</item>
+        <item>모바일 쇼핑</item>
+        <item>약국</item>
+        <item>오프라인</item>
+        <item>매장</item>
+        <item>백화점</item>
+        <item>해외구매</item>
+        <item>기타(선물 등)</item>
+    </string-array>
+
+    <string-array name="filtering">
+        <item>제조사</item>
+        <item>원료</item>
+        <item>효능 기능</item>
+        <item>복용형태</item>
+    </string-array>
+
+    <string-array name="life_sleep">
+        <item>3시간 이하</item>
+        <item>3시간 ~ 5시간</item>
+        <item>5시간 ~ 7시간</item>
+        <item>7시간 ~ 10시간</item>
+        <item>10시간 이상</item>
+    </string-array>
+
+    <string-array name="life_drink_amount">
+        <item>없음</item>
+        <item>2잔 이하</item>
+        <item>3 ~ 5잔</item>
+        <item>6 ~ 9잔</item>
+        <item>10잔 이상</item>
+    </string-array>
+
+    <string-array name="life_drink_count">
+        <item>0 ~ 1 회</item>
+        <item>2회</item>
+        <item>3회</item>
+        <item>4회</item>
+        <item>5회</item>
+        <item>6회</item>
+        <item>7회</item>
+    </string-array>
+
+    <string-array name="life_smoke">
+        <item>비흡연</item>
+        <item>반 갑 이하</item>
+        <item>반 갑</item>
+        <item>한 갑</item>
+        <item>한 갑 이상</item>
+    </string-array>
+
+    <string-array name="life_exercise">
+        <item>0회</item>
+        <item>1회</item>
+        <item>2회</item>
+        <item>3회</item>
+        <item>4회</item>
+        <item>5회 이상</item>
+    </string-array>
+
+    <string-array name="life_pregnant">
+        <item>예</item>
+        <item>아니요</item>
+    </string-array>
+
+    <string-array name="array_disease">
+        <item>암</item>
+        <item>위암</item>
+        <item>유방암</item>
+        <item>대장암</item>
+        <item>고혈압</item>
+        <item>당뇨</item>
+        <item>탈모</item>
+        <item>비만</item>
+        <item>전립선-비뇨</item>
+        <item>성기능 관련</item>
+        <item>아토피-피부</item>
+        <item>심혈관계\n질환</item>
+        <item>관절염</item>
+        <item>호흡기 질환</item>
+        <item>근 골격계\n질환</item>
+        <item>치과 질환</item>
+        <item>소화기 질환</item>
+        <item>안과 질환</item>
+        <item>빈혈</item>
+        <item>신장 질환</item>
+        <item>간질환</item>
+        <item>변비</item>
+        <item>부인과 질환</item>
+        <item>없음</item>
+    </string-array>
+
+    <string-array name="array_interest_health">
+        <item>간건강</item>
+        <item>여성·갱년기 건강</item>
+        <item>과민 피부상태 개선</item>
+        <item>관절 - 뼈 건강</item>
+        <item>기억력 개선</item>
+        <item>긴장 완화</item>
+        <item>눈건강</item>
+        <item>면역 기능개선</item>
+        <item>배뇨 기능개선</item>
+        <item>요로 건강</item>
+        <item>운동 수행능력</item>
+        <item>위 건강 - 소화 건강</item>
+        <item>인지 능력향상</item>
+        <item>장 건강</item>
+        <item>전립선 건강</item>
+        <item>체지방 감소</item>
+        <item>치아 건강</item>
+        <item>칼슘 흡수촉진</item>
+        <item>피로 개선</item>
+        <item>피부 건강</item>
+        <item>항산화</item>
+        <item>혈당 조절</item>
+        <item>혈압 조절</item>
+        <item>혈중중성지방개선</item>
+        <item>혈중콜레스테롤</item>
+        <item>혈행 개선</item>
+        <item>아이 건강</item>
+        <item>구강 건강</item>
+        <item>코 건강</item>
+        <item>수면 질 개선</item>
+        <item>남성 갱년기</item>
+        <item>성기능 향상</item>
+        <item>탈모 예방</item>
+    </string-array>
+
+    <string-array name="array_allergy">
+        <item>육류</item>
+        <item>생선류</item>
+        <item>해산물류</item>
+        <item>유제품</item>
+        <item>계란</item>
+        <item>과일류</item>
+        <item>곡류</item>
+        <item>채소</item>
+        <item>견과류</item>
+        <item>기타</item>
+        <item>없음</item>
+    </string-array>
+
+    <string-array name="taken_count">
+        <item>1개 사용</item>
+        <item>2개 사용</item>
+        <item>3개 사용</item>
+        <item>4개 사용</item>
+        <item>5개 사용</item>
+        <item>6개 사용</item>
+        <item>7개 사용</item>
+        <item>8개 사용</item>
+        <item>9개 사용</item>
+        <item>10개 사용</item>
+    </string-array>
+
+    <string-array name="array_prefer_healthfood">
+        <item>홍삼</item>
+        <item>비타민 A</item>
+        <item>비타민 B</item>
+        <item>비타민 C</item>
+        <item>비타민 D</item>
+        <item>비타민 E</item>
+        <item>비타민 K</item>
+        <item>종합 비타민</item>
+        <item>프로\n바이오틱스</item>
+        <item>밀크씨슬</item>
+        <item>알로에</item>
+        <item>인삼</item>
+        <item>오메가-3</item>
+        <item>가르시니아\n캄보지아\n추출물</item>
+        <item>식이섬유</item>
+        <item>클로렐라</item>
+        <item>감마\n리놀렌산</item>
+        <item>루테인</item>
+        <item>키토산-\n키토올리고당</item>
+        <item>녹차추출물</item>
+        <item>프로폴리스\n추출물</item>
+        <item>옥타코사놀</item>
+        <item>단백질</item>
+        <item>엠에스엠</item>
+        <item>코엔자임\nQ10</item>
+        <item>쏘팔메토열매\n추출물</item>
+        <item>스쿠알렌</item>
+        <item>은행잎</item>
+        <item>글루코사민</item>
+        <item>공액\n리놀레산</item>
+        <item>대두이소\n플라본</item>
+        <item>매실추출물</item>
+        <item>영지버섯\n자실체\n추출물</item>
+        <item>스피루리나</item>
+        <item>백수오</item>
+    </string-array>
+
+    <string-array name="array_eat_drug">
+        <item>고혈압약</item>
+        <item>당뇨약</item>
+        <item>고지혈증약</item>
+        <item>알레르기약</item>
+        <item>다이어트약</item>
+        <item>수면제</item>
+        <item>위염 혹은 식도염약</item>
+        <item>관절,허리,어깨등의\n통증약</item>
+        <item>장염약</item>
+        <item>피임약</item>
+        <item>여성호르몬제</item>
+        <item>갑상선항진증약</item>
+        <item>갑상선저하증약</item>
+        <item>남성형탈모약</item>
+        <item>항암제</item>
+        <item>항생제</item>
+        <item>ADHD 증상완화제</item>
+        <item>간기능 개선약</item>
+        <item>간장약</item>
+        <item>갑상선 호르몬제</item>
+        <item>탈모약</item>
+        <item>변비약</item>
+        <item>한약</item>
+        <item>빈혈약</item>
+        <item>비염약</item>
+        <item>여드름약</item>
+        <item>정신과약</item>
+        <item>하지정맥류 치료제</item>
+        <item>정신과약</item>
+        <item>없음</item>
+    </string-array>
+
+    <string-array name="array_eat_healthfood">
+        <item>홍삼</item>
+        <item>바나바잎추출물</item>
+        <item>멀티비타민</item>
+        <item>마그네슘</item>
+        <item>홍경천추출물</item>
+        <item>비타민A</item>
+        <item>감초추출물</item>
+        <item>칼슘</item>
+        <item>밀크씨슬추출물</item>
+        <item>비타민D</item>
+        <item>오메가-3지방산함유유지</item>
+        <item>초록입홍합추출오일</item>
+        <item>프로바이오틱스</item>
+        <item>옥타코사놀함유유지</item>
+        <item>테아닌</item>
+        <item>비타민C</item>
+        <item>비타민B1</item>
+        <item>아연</item>
+        <item>비타민B6</item>
+        <item>유단백가수분해물</item>
+        <item>코엔자임Q10</item>
+        <item>루테인</item>
+        <item>나이아신</item>
+        <item>이눌린/치커리추출물</item>
+        <item>비오틴</item>
+        <item>키토산</item>
+        <item>빌베리추출물</item>
+        <item>피크노제놀-프랑스해안송껍질추출물</item>
+        <item>글루코사민</item>
+        <item>L-카르니틴타르트레이트</item>
+        <item>미역등복합추출물</item>
+        <item>프로폴리스추출물</item>
+        <item>단백질</item>
+        <item>차전자피식이섬유</item>
+        <item>크레아틴</item>
+        <item>스피루리나</item>
+        <item>히알루론산</item>
+        <item>다래추출물</item>
+        <item>엠에스엠</item>
+        <item>대두이소플라본</item>
+        <item>공액리놀레산</item>
+        <item>감마리놀렌산함유유지</item>
+        <item>쏘팔메토열매추출물</item>
+        <item>비타민E</item>
+        <item>셀레늄</item>
+        <item>베타카로틴</item>
+        <item>비타민B2</item>
+        <item>비타민B12</item>
+        <item>엽산</item>
+        <item>철</item>
+        <item>식이섬유</item>
+        <item>무기질</item>
+        <item>은행잎추출물</item>
+        <item>녹차추출물</item>
+        <item>구리</item>
+        <item>가르시니아캄보지아추출물</item>
+        <item>판토텐산</item>
+        <item>백수오등복합추출물</item>
+        <item>HK나토배양물</item>
+        <item>홍국</item>
+        <item>달맞이꽃종자추출물</item>
+        <item>알로에겔</item>
+        <item>클로렐라</item>
+        <item>콜레우스포스콜리추출물</item>
+        <item>필수지방산</item>
+        <item>돌외잎주정추출분말</item>
+        <item>저분자콜라겐펩타이드</item>
+        <item>나토균배양분말</item>
+        <item>대두식이섬유</item>
+        <item>석류농축액</item>
+        <item>가시오갈피등복합추출물</item>
+        <item>석류추출물</item>
+        <item>피브로인효소가수분해물</item>
+        <item>솔잎증류농축액</item>
+        <item>황기추출물등복합물</item>
+        <item>스쿠알렌</item>
+        <item>레시틴</item>
+        <item>알콕시글리세롤함유상어간유</item>
+        <item>구아바잎추출물등복합물</item>
+        <item>알로에전잎</item>
+        <item>PME-88메론추출물</item>
+        <item>보스웰리아추출물</item>
+        <item>효모베타글루칸</item>
+        <item>루테인/지아잔틴복합추출물</item>
+        <item>망간</item>
+        <item>크랜베리추출물</item>
+        <item>N-아세틸글루코사민</item>
+        <item>회화나무열매추출물</item>
+        <item>셀렌</item>
+        <item>헤마토코쿠스추출물</item>
+        <item>귀리식이섬유</item>
+        <item>포스파티딜세린</item>
+        <item>인삼</item>
+        <item>키토올리고당</item>
+        <item>엽록소함유식물</item>
+        <item>프락토올리고당</item>
+        <item>전칠삼추출물등복합물</item>
+        <item>식물스타놀에스테르</item>
+        <item>감태추출물</item>
+        <item>UREX 프로바이오틱스</item>
+        <item>피니톨</item>
+        <item>요오드</item>
+        <item>폴리감마글루탐산</item>
+        <item>소나무껍질추출물 등 복합물</item>
+        <item>사탕수수 왁스알코올</item>
+        <item>L-테아닌</item>
+        <item>L-카르니틴 타르트레이트</item>
+        <item>미역 등 복합추출물</item>
+        <item>레몬 밤 추출물 혼합분말</item>
+        <item>와일드망고종자추출물</item>
+        <item>루테인지아잔틴복합추출물20%</item>
+        <item>헛개나무과병추출물</item>
+        <item>표고버섯균사체</item>
+        <item>대두배아추출물등복합물</item>
+        <item>강황추출물</item>
+        <item>MR-10민들레등복합추출물</item>
+        <item>곤약감자추출물</item>
+        <item>몰리브덴</item>
+        <item>그린커피빈추출물</item>
+        <item>피카오프레토분말등복합물</item>
+        <item>밀배유추출물</item>
+        <item>식물스타놀에스테르</item>
+        <item>자일리톨</item>
+        <item>헬스보충제</item>
+        <item>L-아르기닌</item>
+        <item>L-글루타민</item>
+        <item>타우린</item>
+        <item>당귀혼합추출물</item>
+        <item>그린마떼추출물</item>
+        <item>황금추출물등복합물</item>
+        <item>유산균발효다시마추출물</item>
+        <item>호박씨추출물등복합물</item>
+        <item>과채유래유산균</item>
+        <item>히비스커스등복합추출물</item>
+        <item>폴리덱스트로스</item>
+        <item>핑거루트추출분말</item>
+        <item>풋사과추출폴리페놀</item>
+        <item>보이차추출물</item>
+        <item>토마토추출물</item>
+        <item>베타인</item>
+        <item>펩신</item>
+        <item>인돌-3-카비놀</item>
+        <item>마카</item>
+        <item>맥주효모</item>
+        <item>L-시스테인</item>
+        <item>L-티로신</item>
+        <item>아사이베리</item>
+        <item>L-라이신</item>
+        <item>L-오르니틴</item>
+        <item>이눌린</item>
+        <item>마늘</item>
+        <item>칼륨</item>
+        <item>케르세틴</item>
+        <item>브로멜라인</item>
+        <item>비즈왁스알코올</item>
+        <item>콜라겐</item>
+        <item>나토키나제</item>
+        <item>Lactobacillus sakei Probio 65</item>
+
+        <item>없음</item>
+    </string-array>
+
+    <string-array name="life_allergy_symptom">
+        <item>피부발진</item>
+        <item>설사</item>
+        <item>소화 불량</item>
+        <item>호흡 곤란</item>
+        <item>변비</item>
+        <item>속쓰림</item>
+        <item>위경련</item>
+        <item>여드름</item>
+        <item>없음</item>
+    </string-array>
+
+    <string-array name="life_pee_symptom">
+        <item>냄새가 심하다</item>
+        <item>거품이 난다</item>
+        <item>소변 본 후 개운하지 않다</item>
+        <item>방광염,요로감염 증상</item>
+        <item>요실금</item>
+        <item>야뇨증</item>
+        <item>불편한 점 없음</item>
+    </string-array>
+
+    <string-array name="life_dung_symptom">
+        <item>변비</item>
+        <item>물변</item>
+        <item>묽은 변</item>
+        <item>변이 가늘다</item>
+        <item>가스가 많이 참</item>
+        <item>대변을 본 후 잔변감</item>
+        <item>대변에 점액이 섞임</item>
+        <item>대변 전에 항상 배가 아픔</item>
+        <item>매운 음식 섭취 시 설사</item>
+        <item>찬 음식 섭취 시 설사</item>
+        <item>장염을 자주 겪음</item>
+        <item>불편한 점 없음</item>
+    </string-array>
+
+    <string-array name="array_health_state">
+        <item>쉽게 피곤해진다</item>
+        <item>잠을 잘 못 잔다</item>
+        <item>소화가 잘 안된다</item>
+        <item>근육통이 쉽게 생기거나 담결림이 잦다</item>
+        <item>관절이 아프다</item>
+        <item>우울하고 짜증이 난다</item>
+        <item>감기가 자주 걸린다</item>
+        <item>입안이 헐거나 혓바늘이 자주 돋는다</item>
+        <item>생리통이 심하다</item>
+        <item>생리가 불규칙하거나 없다</item>
+        <item>살이 찐다</item>
+        <item>살이 빠진다</item>
+        <item>두통이 자주 생긴다</item>
+        <item>술을 마신면 평소보다 숙취가 심하다</item>
+        <item>다리에 쥐가 잘 난다</item>
+        <item>다크써클이 생기고 피부가 칙칙하다</item>
+        <item>머리카락이 많이 빠진다</item>
+        <item>눈 주위가 떨린다</item>
+        <item>손발이 저리다</item>
+        <item>손발이 차다</item>
+        <item>하체가 붓는다</item>
+        <item>없음</item>
+    </string-array>
+
+    <string-array name="life_life_pattern">
+        <item>대부분의 시간을 앉아서 보낸다</item>
+        <item>육체 노동을 한다</item>
+        <item>야근이 잦다</item>
+        <item>최근에 스트레스가 심하다</item>
+        <item>아침형 인간</item>
+        <item>저녁형 인간</item>
+        <item>교대 근무를 많이 한다</item>
+        <item>서서 일하는 시간이 많다</item>
+        <item>생리통이 심하다</item>
+        <item>생리가 불규칙하거나 없다</item>
+        <item>해당사항 없음</item>
+    </string-array>
+
+    <string-array name="life_eat_pattern">
+        <item>하루 3끼 규칙적으로 먹는 편이다</item>
+        <item>인스턴트 음식을 자주 먹는다</item>
+        <item>끼니를 거를 때가 많다</item>
+        <item>커피나 에너지 음료를 자주 마신다</item>
+        <item>탄산 음료를 자주 마신다</item>
+        <item>채소 위주로 식사한다</item>
+        <item>채소나 과일을 거의 먹지 않는다</item>
+        <item>기름진 음식을 좋아한다</item>
+        <item>육류 위주의 식사를 한다</item>
+        <item>해당사항 없음</item>
+    </string-array>
+</resources>
